@@ -1,0 +1,24 @@
+-   configured db(we didn't need to do this)
+
+-   make controller to fetch the stuff from open weather map
+-   in the controller, we'll use client from guzzle
+-   request->query() helps us access parameters in the url. In this case, openweathermap has the city in the url, so we're trying to have access to that.
+-   the client class helps us make http requests to websites. We store this response in $response, which is in a json format. I think we can also use Http::get() as well and add an associative array, but I'm not sure.
+-   getBody() returns the raw data gotten from the json response into an associative array. I'm assuming that since json responses come with status codes and all that, we're just trying to get the body content of the data.
+
+-   there's an ssl verification thing that happens when we try to fetch data from an api, i just set that to false for now, but you should set that up during development
+
+ACTUALLY BROADCASTING
+
+-   we install broadcasting using artisan
+-   we install the other things they ask us to install(reverb and npm dependencies)
+-   compile dependencies(npm run dev)
+
+BROADCAST ROUTES
+
+-   After installing reverb, we get a new routes file called channels routes
+-   the channel method accepts two arguments: the name of the channel and a callback that returns true or false indicating whether the user is authorized to listen on the channel
+
+what do?
+
+-   set ssl verification to true; learn how to use that

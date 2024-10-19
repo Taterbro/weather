@@ -7,5 +7,5 @@ use Illuminate\Support\Facades\Broadcast;
 
 */
 
-Broadcast::channel('App.Models.User.{id}', true);
+Broadcast::channel('weatherchannel', function(){return true;});
 

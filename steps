@@ -12,12 +12,18 @@ ACTUALLY BROADCASTING
 
 -   we install broadcasting using artisan
 -   we install the other things they ask us to install(reverb and npm dependencies)
--   compile dependencies(npm run dev)
 
 BROADCAST ROUTES
 
 -   After installing reverb, we get a new routes file called channels routes
 -   the channel method accepts two arguments: the name of the channel and a callback that returns true or false indicating whether the user is authorized to listen on the channel
+
+frontend
+
+-   set up frontend by writing the echo code in bootsrap js
+-   use vite to actually connect the code to the template
+-   run vite server
+-   compile dependencies(npm run dev)
 
 what do?
 

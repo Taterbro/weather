@@ -11,5 +11,6 @@
     <img src="http://openweathermap.org/img/w/<?php echo $icon; ?>.png" alt="weatherIcon">
     <h2>{{$sumry}}</h2>
     <p>{{$description}}</p>
+    @vite(['resources/js/bootstrap.js'])
 </body>
 </html>

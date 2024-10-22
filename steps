@@ -23,6 +23,8 @@ frontend
 -   set up frontend by writing the echo code in bootsrap js
 -   use vite to actually connect the code to the template
 -   run vite server
+-   we also need to run a queue to actually LISTEN FOR EVENTS. le sigh!!! took like a whole day to figure this out lmao.
+    'php artisan queue:listen'
 -   compile dependencies(npm run dev)
 
 what do?

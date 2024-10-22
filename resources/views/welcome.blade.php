@@ -7,10 +7,10 @@
 </head>
 <body>
     <h1>Weather</h1>
-    <h2>{{$city}}</h2>
-    <img src="http://openweathermap.org/img/w/<?php echo $icon; ?>.png" alt="weatherIcon">
-    <h2>{{$sumry}}</h2>
-    <p>{{$description}}</p>
+    <h2 id="weather"></h2>
+    <img alt="weatherIcon" id="icon">
+    <h2 id="desc"></h2>
+    <p id="city"></p>
     @vite(['resources/js/bootstrap.js'])
 </body>
 </html>

@@ -23,9 +23,12 @@ class weathercontroller extends Controller
         $sumry = $weather['main'];
         $description = $weather['description'];
         $icon = $weather['icon'];
-        Log::info('weather data: ', $weatherdata);
+        $weatherstuff = ['weather'=>$weatherdata['weather'][0]['main'], 'sumry'=>$sumry, 'description'=>$description, 'icon'=>$icon, 'city'=>$plaincity];
 
-        return view('welcome', ['weatherdata'=>$weatherdata, 'sumry'=>$sumry, 'description'=>$description, 'icon'=>$icon, 'city'=>$plaincity]);
+        event(new weatherevent($weatherstuff));
+        broadcast(new weatherevent($weatherstuff));
+
+        return view('welcome', );
     }
 }
 

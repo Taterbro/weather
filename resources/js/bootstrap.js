@@ -11,8 +11,19 @@ window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
 import "./echo";
 
-window.addEventListener("DOMContentLoaded", function () {
+function init() {
     window.Echo.channel("weatherchannel").listen("weatherevent", (e) => {
-        console.log(e);
+        const icon = e.weatherdata.icon;
+        const weather = e.weatherdata.weather;
+        const desc = e.weatherdata.description;
+        const city = e.weatherdata.city;
+
+        document.getElementById(
+            "icon"
+        ).src = `http://openweathermap.org/img/wn/${icon}@2x.png`;
+        document.getElementById("desc").textContent = desc;
+        document.getElementById("weather").textContent = weather;
+        document.getElementById("city").textContent = city;
     });
-});
+}
+init();
